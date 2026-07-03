@@ -1,0 +1,25 @@
+{
+  "name": "frontend-expert-boost",
+  "displayName": "Frontend Expert Boost - Angular + React",
+  "description": "Awesome Copilot style boost for production-grade Angular, React, TypeScript, microfrontends, design systems, accessibility, performance and testing.",
+  "version": "1.0.0",
+  "author": "Sergio Hierro Cinos",
+  "repository": "local",
+  "agents": ".github/agents",
+  "instructions": [
+    ".github/instructions"
+  ],
+  "skills": [
+    ".github/skills"
+  ],
+  "prompts": [
+    ".github/prompts"
+  ],
+  "specs": [
+    "specs"
+  ],
+  "templates": [
+    "templates"
+  ],
+  "license": "MIT"
+}
