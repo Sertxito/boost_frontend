@@ -2,12 +2,15 @@
 
 Ejemplos listos para copiar y adaptar. Cada caso indica el prompt recomendado y el artefacto de salida esperado.
 
+Si buscas ejemplos por skill, revisa examples/skills-use-cases.md.
+Si buscas ejemplos de templates ya rellenados, revisa examples/template-examples/.
+
 ## 1. Revisar arquitectura frontend
 
 Prompt:
 
 ```text
-Usa .github/prompts/frontend-architecture-review.prompt.md para revisar este repo. Quiero diagnostico por dominio, riesgos por severidad, quick wins de 2 semanas y plan de 90 dias.
+Usa prompts/frontend-architecture-review.prompt.md para revisar este repo. Quiero diagnostico por dominio, riesgos por severidad, quick wins de 2 semanas y plan de 90 dias.
 ```
 
 Salida esperada:
@@ -19,7 +22,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/generate-angular-feature.prompt.md para implementar esta feature: [describe funcionalidad]. Incluye estados loading/error/empty, tests y checklist a11y.
+Usa prompts/generate-angular-feature.prompt.md para implementar esta feature: [describe funcionalidad]. Incluye estados loading/error/empty, tests y checklist a11y.
 ```
 
 Salida esperada:
@@ -32,7 +35,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/generate-react-feature.prompt.md para implementar esta feature: [describe funcionalidad]. Incluye estrategia de estado, tests y validacion de rendimiento.
+Usa prompts/generate-react-feature.prompt.md para implementar esta feature: [describe funcionalidad]. Incluye estrategia de estado, tests y validacion de rendimiento.
 ```
 
 Salida esperada:
@@ -45,7 +48,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/code-review-frontend.prompt.md para revisar este diff. Clasifica hallazgos en Critical/High/Medium/Low y di si es mergeable.
+Usa prompts/code-review-frontend.prompt.md para revisar este diff. Clasifica hallazgos en Critical/High/Medium/Low y di si es mergeable.
 ```
 
 Salida esperada:
@@ -57,7 +60,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/audit-accessibility.prompt.md sobre estas rutas: [lista]. Necesito hallazgos WCAG AA y plan de remediacion priorizado.
+Usa prompts/audit-accessibility.prompt.md sobre estas rutas: [lista]. Necesito hallazgos WCAG AA y plan de remediacion priorizado.
 ```
 
 Salida esperada:
@@ -69,7 +72,19 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/audit-performance.prompt.md para rutas criticas. Quiero baseline, cuellos de botella y plan de optimizacion por impacto/esfuerzo.
+Usa prompts/audit-performance.prompt.md para rutas criticas. Quiero baseline, cuellos de botella y plan de optimizacion por impacto/esfuerzo.
+```
+
+Salida esperada:
+
+- templates/performance-audit.template.md
+
+## 6b. Auditar observabilidad
+
+Prompt:
+
+```text
+Usa prompts/audit-observability.prompt.md para evaluar errores, eventos de negocio, CWV en campo y alertas. Quiero gaps priorizados y plan operativo.
 ```
 
 Salida esperada:
@@ -81,7 +96,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/audit-security-auth.prompt.md para evaluar auth, tokens, XSS/CSRF/CSP y secretos expuestos.
+Usa prompts/audit-security-auth.prompt.md para evaluar auth, tokens, XSS/CSRF/CSP y secretos expuestos.
 ```
 
 Salida esperada:
@@ -93,7 +108,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/define-testing-strategy.prompt.md para esta release. Quiero matriz riesgo->test, quality gates CI y plan anti-flakiness.
+Usa prompts/define-testing-strategy.prompt.md para esta release. Quiero matriz riesgo->test, quality gates CI y plan anti-flakiness.
 ```
 
 Salida esperada:
@@ -105,7 +120,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/design-system-plan.prompt.md para definir tokens, API de componentes y plan de adopcion por equipos.
+Usa prompts/design-system-plan.prompt.md para definir tokens, API de componentes y plan de adopcion por equipos.
 ```
 
 Salida esperada:
@@ -117,7 +132,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/microfrontend-decision.prompt.md para decidir microfrontend vs modular monolith en este dominio: [describe dominio].
+Usa prompts/microfrontend-decision.prompt.md para decidir microfrontend vs modular monolith en este dominio: [describe dominio].
 ```
 
 Salida esperada:
@@ -129,7 +144,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/frontend-modernization-plan.prompt.md para modernizar este frontend legacy sin big-bang. Quiero fases, rollback y criterios de retirada de legacy.
+Usa prompts/frontend-modernization-plan.prompt.md para modernizar este frontend legacy sin big-bang. Quiero fases, rollback y criterios de retirada de legacy.
 ```
 
 Salida esperada:
@@ -141,7 +156,7 @@ Salida esperada:
 Prompt:
 
 ```text
-Usa .github/prompts/create-frontend-adr.prompt.md para esta decision: [describe decision]. Necesito alternativas descartadas, riesgos y plan de validacion.
+Usa prompts/create-frontend-adr.prompt.md para esta decision: [describe decision]. Necesito alternativas descartadas, riesgos y plan de validacion.
 ```
 
 Salida esperada:

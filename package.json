@@ -1,0 +1,85 @@
+{
+  "name": "mcpee-frontend",
+  "version": "1.0.0",
+  "description": "Frontend Expert Boost for Angular and React with accessibility, performance, testing and architecture workflows.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./mcpee": "./mcpee.json",
+    "./plugin": "./plugin.json"
+  },
+  "files": [
+    "mcpee.json",
+    "plugin.json",
+    "agents",
+    "instructions",
+    "prompts",
+    "skills",
+    "specs",
+    "templates",
+    "docs",
+    "references",
+    "examples",
+    "evals",
+    "scripts",
+    "README.md",
+    "AGENTS.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "validate:json": "node -e \"const fs=require('fs'); ['mcpee.json','plugin.json','.releaserc.json'].forEach((f)=>JSON.parse(fs.readFileSync(f,'utf8'))); console.log('JSON metadata OK');\"",
+    "evals": "node scripts/run-evals.mjs",
+    "quality": "npm run validate:json && npm run evals",
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run"
+  },
+  "keywords": [
+    "mcpee",
+    "frontend",
+    "angular",
+    "react",
+    "accessibility",
+    "performance",
+    "testing",
+    "design-system",
+    "microfrontends",
+    "agents",
+    "skills"
+  ],
+  "author": "Sergio Hierro Cinos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sertxito/boost_frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sertxito/boost_frontend/issues"
+  },
+  "homepage": "https://github.com/Sertxito/boost_frontend#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@mcpee/core": "^0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@mcpee/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.5",
+    "@semantic-release/npm": "^11.0.3",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release": "^24.2.7"
+  }
+}

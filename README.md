@@ -2,12 +2,14 @@
 
 Boost estilo awesome-copilot para convertir Copilot / agentes en un equipo frontend senior/principal orientado a produccion.
 
+Paquete npm: `mcpee-frontend`.
+
 ## Que incluye
 
 - Agentes especializados para arquitectura frontend, Angular, React, microfrontends, testing, accesibilidad, performance, design systems, migraciones y revision de codigo.
 - Skills autoactivables con instrucciones operativas y checklists repetibles.
 - Instrucciones de repositorio para GitHub Copilot.
-- Specs de arquitectura, calidad, seguridad, performance y accesibilidad.
+- Specs de arquitectura, calidad, seguridad, performance, accesibilidad y observabilidad.
 - Templates para componentes, tests, ADRs, auditorias y planes de implementacion.
 - Prompts de uso frecuente para aplicar el boost en VS Code / GitHub Copilot.
 - Plugin manifest para distribuirlo como paquete de personalizacion.
@@ -19,26 +21,48 @@ frontend-expert-boost/
 ├── AGENTS.md
 ├── README.md
 ├── plugin.json
-├── .github/
-│   ├── agents/
-│   ├── instructions/
-│   ├── prompts/
-│   └── skills/
+├── agents/
+├── instructions/
+├── prompts/
+├── skills/
 ├── specs/
 ├── templates/
 ├── examples/
-└── docs/
+├── docs/
+└── .github/
+    └── copilot-instructions.md
+```
+
+## Publicacion npm
+
+```bash
+npm publish --access public
+```
+
+## Evals y control de regresiones
+
+```bash
+npm run evals
+npm run quality
+```
+
+`npm run quality` ejecuta validacion de JSON y evals smoke del boost para bloquear errores de cobertura antes de publicar.
+
+Instalacion como dependencia:
+
+```bash
+npm i -D mcpee-frontend
 ```
 
 ## Instalacion manual
 
-Copia la carpeta `.github` y los directorios `specs`, `templates` y `docs` en la raiz de tu repo.
+Copia las carpetas `agents`, `instructions`, `prompts`, `skills`, `specs`, `templates` y `docs` en la raiz de tu repo.
 
 Para usarlo con GitHub Copilot:
 
 1. Abre el repo en VS Code.
 2. Revisa `.github/copilot-instructions.md`.
-3. Lanza prompts desde `.github/prompts`.
+3. Lanza prompts desde `prompts/`.
 4. Invoca agentes por nombre cuando necesites foco experto.
 5. Usa los templates como punto de partida, no como dogma.
 
@@ -94,6 +118,7 @@ Usa esta matriz para decidir rapido que agente invocar segun el tipo de tarea.
 | Subir cobertura y calidad de tests | `TestingStrategistAgent` | `FrontendCodeReviewAgent` | Estrategia de pruebas + quality gates CI |
 | Corregir problemas WCAG AA | `AccessibilityAuditorAgent` | `FrontendCodeReviewAgent` | Hallazgos WCAG + plan de remediacion |
 | Mejorar Core Web Vitals y bundle | `PerformanceAuditorAgent` | `ReactExpertAgent` o `AngularExpertAgent` | Diagnostico de cuellos de botella + plan medible |
+| Instrumentar o auditar observabilidad frontend | `PerformanceAuditorAgent` | `FrontendPrincipalArchitect`, `FrontendCodeReviewAgent` | Catalogo de telemetria + alertas + runbooks + plan de validacion |
 | Auditar autenticacion y seguridad frontend | `FrontendCodeReviewAgent` | `FrontendPrincipalArchitect` | Hallazgos por severidad + mitigaciones + riesgo residual |
 | Modernizar codigo legacy sin reescritura total | `FrontendMigrationModernizationAgent` | `FrontendPrincipalArchitect`, `TestingStrategistAgent` | Roadmap incremental + estrategia de convivencia + rollback |
 
@@ -111,18 +136,19 @@ Usa esta tabla para ejecutar rapido un flujo completo: pedir bien al agente y do
 
 | Prompt | Agente recomendado | Skill recomendada | Template de salida |
 | --- | --- | --- | --- |
-| `.github/prompts/generate-react-feature.prompt.md` | `ReactExpertAgent` | `.github/skills/react-production-review/SKILL.md` | `templates/react-component.template.md` + `templates/frontend-test.template.md` |
-| `.github/prompts/generate-angular-feature.prompt.md` | `AngularExpertAgent` | `.github/skills/angular-production-review/SKILL.md` | `templates/angular-standalone-component.template.md` + `templates/frontend-test.template.md` |
-| `.github/prompts/code-review-frontend.prompt.md` | `FrontendCodeReviewAgent` | `.github/skills/frontend-code-review/SKILL.md` | `templates/frontend-code-review-report.template.md` |
-| `.github/prompts/create-frontend-adr.prompt.md` | `FrontendPrincipalArchitect` | `.github/skills/frontend-architecture-review/SKILL.md` | `templates/adr-template.md` |
-| `.github/prompts/frontend-architecture-review.prompt.md` | `FrontendPrincipalArchitect` | `.github/skills/frontend-architecture-review/SKILL.md` | `templates/frontend-architecture-review.template.md` |
-| `.github/prompts/frontend-modernization-plan.prompt.md` | `FrontendMigrationModernizationAgent` | `.github/skills/frontend-modernization-migration/SKILL.md` | `templates/frontend-modernization-plan.template.md` |
-| `.github/prompts/audit-accessibility.prompt.md` | `AccessibilityAuditorAgent` | `.github/skills/accessibility-wcag-aa/SKILL.md` | `templates/accessibility-audit.template.md` |
-| `.github/prompts/audit-performance.prompt.md` | `PerformanceAuditorAgent` | `.github/skills/performance-core-web-vitals/SKILL.md` | `templates/performance-audit.template.md` |
-| `.github/prompts/audit-security-auth.prompt.md` | `FrontendCodeReviewAgent` | `.github/skills/security-auth-frontend/SKILL.md` | `templates/security-auth-audit.template.md` |
-| `.github/prompts/define-testing-strategy.prompt.md` | `TestingStrategistAgent` | `.github/skills/frontend-testing-strategy/SKILL.md` | `templates/testing-strategy.template.md` |
-| `.github/prompts/design-system-plan.prompt.md` | `DesignSystemArchitectAgent` | `.github/skills/design-system-governance/SKILL.md` | `templates/adr-template.md` |
-| `.github/prompts/microfrontend-decision.prompt.md` | `MicrofrontendArchitectAgent` | `.github/skills/microfrontend-decision/SKILL.md` | `templates/adr-template.md` |
+| `prompts/generate-react-feature.prompt.md` | `ReactExpertAgent` | `skills/react-production-review/SKILL.md` | `templates/react-component.template.md` + `templates/frontend-test.template.md` |
+| `prompts/generate-angular-feature.prompt.md` | `AngularExpertAgent` | `skills/angular-production-review/SKILL.md` | `templates/angular-standalone-component.template.md` + `templates/frontend-test.template.md` |
+| `prompts/code-review-frontend.prompt.md` | `FrontendCodeReviewAgent` | `skills/frontend-code-review/SKILL.md` | `templates/frontend-code-review-report.template.md` |
+| `prompts/create-frontend-adr.prompt.md` | `FrontendPrincipalArchitect` | `skills/frontend-architecture-review/SKILL.md` | `templates/adr-template.md` |
+| `prompts/frontend-architecture-review.prompt.md` | `FrontendPrincipalArchitect` | `skills/frontend-architecture-review/SKILL.md` | `templates/frontend-architecture-review.template.md` |
+| `prompts/frontend-modernization-plan.prompt.md` | `FrontendMigrationModernizationAgent` | `skills/frontend-modernization-migration/SKILL.md` | `templates/frontend-modernization-plan.template.md` |
+| `prompts/audit-accessibility.prompt.md` | `AccessibilityAuditorAgent` | `skills/accessibility-wcag-aa/SKILL.md` | `templates/accessibility-audit.template.md` |
+| `prompts/audit-performance.prompt.md` | `PerformanceAuditorAgent` | `skills/performance-core-web-vitals/SKILL.md` | `templates/performance-audit.template.md` |
+| `prompts/audit-observability.prompt.md` | `PerformanceAuditorAgent` | `skills/frontend-observability-telemetry/SKILL.md` | `templates/performance-audit.template.md` |
+| `prompts/audit-security-auth.prompt.md` | `FrontendCodeReviewAgent` | `skills/security-auth-frontend/SKILL.md` | `templates/security-auth-audit.template.md` |
+| `prompts/define-testing-strategy.prompt.md` | `TestingStrategistAgent` | `skills/frontend-testing-strategy/SKILL.md` | `templates/testing-strategy.template.md` |
+| `prompts/design-system-plan.prompt.md` | `DesignSystemArchitectAgent` | `skills/design-system-governance/SKILL.md` | `templates/adr-template.md` |
+| `prompts/microfrontend-decision.prompt.md` | `MicrofrontendArchitectAgent` | `skills/microfrontend-decision/SKILL.md` | `templates/adr-template.md` |
 
 ## Que hace docs y por que no va todo al README
 
@@ -136,6 +162,8 @@ La carpeta `docs` guarda guias operativas que son mas largas y cambiantes:
 La carpeta `examples` guarda ejemplos de uso listos para copiar y adaptar:
 
 - `examples/use-cases.md`: prompts de referencia por escenario.
+- `examples/skills-use-cases.md`: ejemplos de uso directos por skill.
+- `examples/template-examples/`: ejemplos de salida ya rellenados desde templates.
 
 Regla practica:
 

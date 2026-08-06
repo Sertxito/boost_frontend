@@ -1,0 +1,13 @@
+# Generated reports
+**/PREFLIGHT-REPORT.md
+**/SANITIZATION-REPORT.md
+**/VALIDATION-REPORT.md
+
+# Workspaces de proyectos DBA (datos de cliente, no versionar)
+workspaces/
+
+# Esquemas y scripts SQL de entrada (datos de cliente, no versionar)
+input/
+
+# Token usage logs locales (no versionar, solo el MD)
+.github/reports/token-usage-history.json
