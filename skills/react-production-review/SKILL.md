@@ -1,3 +1,8 @@
+---
+name: react-production-review
+description: 'Revisa o implementa React moderno con hooks, estado, efectos, rendering, accesibilidad, performance y tests.'
+---
+
 # react-production-review
 
 ## Description

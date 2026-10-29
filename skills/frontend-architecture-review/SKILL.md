@@ -1,3 +1,8 @@
+---
+name: frontend-architecture-review
+description: 'Evalua arquitectura frontend, boundaries, ownership, estado, dependencias, microfrontends y riesgos.'
+---
+
 # frontend-architecture-review
 
 ## Description

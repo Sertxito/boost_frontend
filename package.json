@@ -1,16 +1,15 @@
 {
-  "name": "mcpee-frontend",
+  "name": "boost-frontend",
   "version": "1.0.0",
   "description": "Frontend Expert Boost for Angular and React with accessibility, performance, testing and architecture workflows.",
   "type": "module",
-  "main": "index.js",
   "exports": {
-    ".": "./index.js",
-    "./mcpee": "./mcpee.json",
-    "./plugin": "./plugin.json"
+    "./plugin": "./plugin.json",
+    "./boost.json": "./boost.json",
+    "./package.json": "./package.json"
   },
   "files": [
-    "mcpee.json",
+    "boost.json",
     "plugin.json",
     "agents",
     "instructions",
@@ -26,17 +25,19 @@
     "README.md",
     "AGENTS.md",
     "LICENSE",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    ".github/copilot-instructions.md"
   ],
   "scripts": {
-    "validate:json": "node -e \"const fs=require('fs'); ['mcpee.json','plugin.json','.releaserc.json'].forEach((f)=>JSON.parse(fs.readFileSync(f,'utf8'))); console.log('JSON metadata OK');\"",
+    "validate:json": "node -e \"const fs=require('fs'); ['boost.json','plugin.json','.releaserc.json'].forEach((f)=>JSON.parse(fs.readFileSync(f,'utf8'))); console.log('JSON metadata OK');\"",
     "evals": "node scripts/run-evals.mjs",
     "quality": "npm run validate:json && npm run evals",
     "release": "semantic-release",
-    "release:dry": "semantic-release --dry-run"
+    "release:dry": "semantic-release --dry-run",
+    "boost:install": "node scripts/install.mjs",
+    "boost:check": "node scripts/install.mjs --check"
   },
   "keywords": [
-    "mcpee",
     "frontend",
     "angular",
     "react",
@@ -46,7 +47,10 @@
     "design-system",
     "microfrontends",
     "agents",
-    "skills"
+    "skills",
+    "copilot",
+    "github-copilot",
+    "agent-skills"
   ],
   "author": "Sergio Hierro Cinos",
   "repository": {
@@ -64,14 +68,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@mcpee/core": "^0.1.0"
-  },
-  "peerDependenciesMeta": {
-    "@mcpee/core": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
@@ -81,5 +77,8 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "semantic-release": "^24.2.7"
+  },
+  "bin": {
+    "boost-frontend": "scripts/install.mjs"
   }
 }

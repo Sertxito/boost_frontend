@@ -1,3 +1,8 @@
+---
+description: 'Reducir riesgos de seguridad frontend en autenticacion, manejo de tokens, inyecciones, dependencias y exposicion de datos.'
+applyTo: '**/*.{ts,tsx,js,jsx,html}'
+---
+
 # Security Instructions
 
 ## Objetivo

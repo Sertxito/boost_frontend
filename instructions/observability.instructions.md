@@ -1,3 +1,8 @@
+---
+description: 'Garantizar observabilidad frontend operativa para detectar regresiones, diagnosticar incidentes y mejorar experiencia real de usuario en produccion.'
+applyTo: '**/*.{ts,tsx,js,jsx}'
+---
+
 # Observability Instructions
 
 ## Objetivo

@@ -1,3 +1,8 @@
+---
+name: microfrontend-decision
+description: 'Evalua y define estrategia de microfrontends con contratos host-remote, versionado y bajo acoplamiento runtime.'
+---
+
 # microfrontend-decision
 
 ## Description

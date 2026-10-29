@@ -1,3 +1,8 @@
+---
+description: 'Construir y evolucionar un design system reutilizable con tokens estables, componentes accesibles y governance sostenible.'
+applyTo: '**/*.{ts,tsx,js,jsx,css,scss,html}'
+---
+
 # Design System Instructions
 
 ## Objetivo

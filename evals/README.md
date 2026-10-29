@@ -11,7 +11,7 @@ Este directorio contiene evaluaciones de humo para evitar regresiones en el paqu
 
 ## Que valida
 
-1. Existencia de artefactos declarados en `mcpee.json` y `plugin.json`.
+1. Existencia de artefactos declarados en `boost.json` y `plugin.json`.
 2. Existencia de cada caso en la suite (`agent`, `prompt`, `skill`, `spec`).
 3. Consistencia de frontmatter: prompt `agent` y agent `name`.
 4. Que skills/specs usadas en casos pertenecen al core catalog.
