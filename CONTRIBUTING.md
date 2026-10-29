@@ -1,4 +1,4 @@
-# Contributing to mcpee-frontend
+# Contributing to boost-frontend
 
 ## Scope
 
@@ -26,7 +26,7 @@ Contributions must preserve internal alignment across these artifact families.
 npm run quality
 ```
 
-1. If adding or changing capabilities, verify `mcpee.json` and `plugin.json` references remain valid.
+1. If adding or changing capabilities, verify `boost.json` and `plugin.json` references remain valid.
 1. Submit a PR with:
 - change summary,
 - impacted capabilities,
@@ -49,14 +49,14 @@ When changing a capability domain, keep these assets aligned:
 - `prompts/*` when interaction workflows change
 - `templates/*` if output shape changes
 - `agents/*` when routing or responsibility changes
-- `mcpee.json` package catalog
+- `boost.json` package catalog
 - `plugin.json` boost manifest
 
 ## Validation Gates
 
 `npm run quality` currently verifies:
 
-- JSON metadata integrity (`mcpee.json`, `plugin.json`, `.releaserc.json`).
+- JSON metadata integrity (`boost.json`, `plugin.json`, `.releaserc.json`).
 
 Do not open a PR if any gate fails.
 

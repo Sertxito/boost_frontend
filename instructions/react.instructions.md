@@ -1,3 +1,8 @@
+---
+description: 'Construir React de produccion con composicion clara, limites entre server/client state y rendimiento basado en evidencia.'
+applyTo: '**/*.{tsx,jsx,ts,js}'
+---
+
 # React Modern Instructions
 
 ## Objetivo

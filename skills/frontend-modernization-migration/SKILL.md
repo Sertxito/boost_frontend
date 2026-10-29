@@ -1,3 +1,8 @@
+---
+name: frontend-modernization-migration
+description: 'Planifica y ejecuta modernizacion frontend legacy con enfoque incremental, control de riesgo y convivencia temporal.'
+---
+
 # frontend-modernization-migration
 
 ## Description

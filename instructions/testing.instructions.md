@@ -1,3 +1,8 @@
+---
+description: 'Construir una estrategia de pruebas por riesgo que maximize confianza de release con tiempo de CI sostenible.'
+applyTo: '**/*.{test,spec}.{ts,tsx,js,jsx}'
+---
+
 # Testing Instructions
 
 ## Objetivo

@@ -1,3 +1,8 @@
+---
+description: 'Garantizar cumplimiento WCAG AA en interacciones reales: teclado, foco visible, semantica correcta y soporte de lectores de pantalla.'
+applyTo: '**/*.{ts,tsx,js,jsx,html,vue,css,scss}'
+---
+
 # Accessibility Instructions
 
 ## Objetivo

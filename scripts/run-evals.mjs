@@ -82,7 +82,7 @@ function assertContainsAll(relPath, text, requiredSnippets, errors, kind) {
 const errors = [];
 let caseCount = 0;
 
-const mcpee = readJson('mcpee.json', errors);
+const mcpee = readJson('boost.json', errors);
 const plugin = readJson('plugin.json', errors);
 const suite = readJson('evals/frontend-smoke.json', errors);
 

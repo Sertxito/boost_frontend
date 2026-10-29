@@ -2,7 +2,7 @@
 
 Convierte Copilot y agentes en un equipo frontend senior/principal orientado a produccion: Angular, React, arquitectura, calidad, accesibilidad y performance.
 
-Paquete npm: `mcpee-frontend`.
+Paquete npm: `boost-frontend`.
 
 ## Que incluye
 
@@ -37,13 +37,27 @@ frontend-expert-boost/
 
 ## Instalacion
 
-Como dependencia de desarrollo:
+Este boost es **autocontenido**: no necesita runtime, plugin ni servidor MCP. Un solo comando copia sus activos a las rutas donde GitHub Copilot / VS Code los descubren automaticamente.
 
 ```bash
-npm i -D mcpee-frontend
+# Desde la raiz de TU proyecto
+npx github:Sertxito/boost_frontend
+# o, una vez publicado en npm
+npx boost-frontend
 ```
 
-O copia manualmente `agents`, `instructions`, `prompts`, `skills`, `specs`, `templates` y `docs` en la raiz de tu repo.
+| Activo | Se instala en |
+|---|---|
+| Agentes | `.github/agents/*.agent.md` |
+| Skills | `.github/skills/<nombre>/SKILL.md` y `.agents/skills/<nombre>/SKILL.md` |
+| Prompts | `.github/prompts/*.prompt.md` |
+| Instrucciones | `.github/instructions/*.instructions.md` |
+| Instrucciones globales | `.github/copilot-instructions.md` (solo si el proyecto no tiene) |
+
+Opciones: `--target <dir>`, `--force` (sobrescribir), `--dry-run`, `--no-agents-dir` (omite `.agents/skills`), `--check` (verifica la instalacion), `--uninstall`.
+Nunca se sobrescriben archivos existentes sin `--force`, asi que varios boosts conviven en el mismo proyecto.
+
+**Verifica:** ejecuta `npx boost-frontend --check`, recarga VS Code (`Developer: Reload Window`) y escribe `@` en Copilot Chat (agentes), `/` (prompts) y abre el selector de skills.
 
 ## Arranque rapido
 
@@ -94,3 +108,12 @@ npm run quality # validacion JSON + evals; bloquea antes de publicar
 - [docs/official-references.md](docs/official-references.md) — fuentes oficiales Angular, React, TypeScript, a11y, performance y seguridad.
 - [examples/use-cases.md](examples/use-cases.md) — prompts de referencia por escenario.
 - [examples/skills-use-cases.md](examples/skills-use-cases.md) — ejemplos de uso por skill.
+
+## Naming and collisions
+
+Installed assets are prefixed with `frontend-` (e.g. `.github/agents/frontend-<name>.agent.md`, `.github/skills/frontend-<name>/`) so several boosts can live in the same project, and internal references are rewritten to match.
+
+- Nothing that already exists in the target is overwritten: each ignored file is reported with a `[WARN] ... already existed ... IGNORED` message. Use `--force` to overwrite.
+- An existing `.github/copilot-instructions.md` is kept; the boost's global guidance is installed as `frontend-global.instructions.md` instead.
+- Re-running the installer is safe; `--check` and `--uninstall` work from the manifest.
+

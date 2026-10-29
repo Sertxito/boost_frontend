@@ -1,3 +1,8 @@
+---
+name: design-system-governance
+description: 'Disena o revisa un design system con tokens, themes, componentes y reglas de uso.'
+---
+
 # design-system-governance
 
 ## Description

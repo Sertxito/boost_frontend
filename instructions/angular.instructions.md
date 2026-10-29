@@ -1,3 +1,8 @@
+---
+description: 'Implementar Angular moderno con standalone components, signals, lazy loading y arquitectura por dominio, priorizando mantenibilidad y rendimiento medible.'
+applyTo: '**/*.{ts,html,scss}'
+---
+
 # Angular Modern Instructions
 
 ## Objetivo

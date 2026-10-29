@@ -1,3 +1,8 @@
+---
+description: 'Ejecutar revisiones tecnicas con foco en bugs, seguridad, regresiones funcionales y deuda que afecte produccion.'
+applyTo: '**/*.{ts,tsx,js,jsx,html,css,scss}'
+---
+
 # Frontend Code Review Instructions
 
 ## Objetivo

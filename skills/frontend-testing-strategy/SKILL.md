@@ -1,3 +1,8 @@
+---
+name: frontend-testing-strategy
+description: 'Define estrategia equilibrada de tests para frontend enterprise.'
+---
+
 # frontend-testing-strategy
 
 ## Description

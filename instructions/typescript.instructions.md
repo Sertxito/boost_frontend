@@ -1,3 +1,8 @@
+---
+description: 'Mantener TypeScript estricto y expresivo para reducir errores en runtime y preservar contratos estables entre capas.'
+applyTo: '**/*.{ts,tsx}'
+---
+
 # TypeScript Strict Instructions
 
 ## Objetivo

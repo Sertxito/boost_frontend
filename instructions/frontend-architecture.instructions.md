@@ -1,3 +1,8 @@
+---
+description: 'Tomar decisiones de arquitectura frontend de alto impacto con trade-offs explicitos, escalabilidad de equipos y control de riesgo.'
+applyTo: '**/*.{ts,tsx,js,jsx}'
+---
+
 # Frontend Architecture Instructions
 
 ## Objetivo

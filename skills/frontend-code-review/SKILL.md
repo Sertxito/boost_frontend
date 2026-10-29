@@ -1,3 +1,8 @@
+---
+name: frontend-code-review
+description: 'Ejecuta code review frontend severa orientada a defectos reales, seguridad, regresiones y riesgo de release.'
+---
+
 # frontend-code-review
 
 ## Description

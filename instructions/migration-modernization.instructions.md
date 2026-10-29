@@ -1,3 +1,8 @@
+---
+description: 'Modernizar frontend legacy con estrategia incremental, bajo riesgo operativo y valor entregable en cada fase.'
+applyTo: '**/*.{ts,tsx,js,jsx,json}'
+---
+
 # Migration and Modernization Instructions
 
 ## Objetivo

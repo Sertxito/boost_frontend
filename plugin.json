@@ -1,6 +1,6 @@
 {
-  "name": "mcpee-frontend",
-  "displayName": "MCPEE Frontend Boost - Angular + React",
+  "name": "boost-frontend",
+  "displayName": "Frontend Boost - Angular + React",
   "description": "Awesome Copilot style boost for production-grade Angular, React, TypeScript, microfrontends, design systems, accessibility, performance and testing.",
   "version": "1.0.0",
   "author": "Sergio Hierro Cinos",

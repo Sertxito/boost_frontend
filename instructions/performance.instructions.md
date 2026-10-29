@@ -1,3 +1,8 @@
+---
+description: 'Optimizar rendimiento frontend con baseline, hipotesis y medicion antes/despues para mejorar CWV sin degradar UX ni mantenibilidad.'
+applyTo: '**/*.{ts,tsx,js,jsx,html,css,scss}'
+---
+
 # Performance Instructions
 
 ## Objetivo

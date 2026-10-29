@@ -1,3 +1,8 @@
+---
+name: frontend-observability-telemetry
+description: 'Define y audita observabilidad frontend de produccion: errores, eventos de negocio, Core Web Vitals, dashboards y alertas accionables.'
+---
+
 # frontend-observability-telemetry
 
 ## Description

@@ -1,3 +1,8 @@
+---
+name: angular-production-review
+description: 'Revisa o implementa Angular moderno con standalone, signals, lazy loading, accesibilidad, performance y tests.'
+---
+
 # angular-production-review
 
 ## Description

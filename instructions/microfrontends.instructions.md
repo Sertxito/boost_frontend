@@ -1,3 +1,8 @@
+---
+description: 'Disenar microfrontends con independencia de despliegue real, contratos estables y acoplamiento runtime minimo.'
+applyTo: '**/*.{ts,tsx,js,jsx,json}'
+---
+
 # Microfrontend Instructions
 
 ## Objetivo

@@ -1,3 +1,8 @@
+---
+name: accessibility-wcag-aa
+description: 'Audita UI contra WCAG AA y propone correcciones concretas.'
+---
+
 # accessibility-wcag-aa
 
 ## Description

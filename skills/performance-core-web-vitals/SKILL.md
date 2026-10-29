@@ -1,3 +1,8 @@
+---
+name: performance-core-web-vitals
+description: 'Audita rendimiento frontend orientado a Core Web Vitals, bundle, render y experiencia real.'
+---
+
 # performance-core-web-vitals
 
 ## Description

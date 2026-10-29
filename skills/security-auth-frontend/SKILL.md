@@ -1,3 +1,8 @@
+---
+name: security-auth-frontend
+description: 'Revisa autenticacion, autorizacion, tokens, XSS, CSP, CSRF y exposicion de secretos en frontend.'
+---
+
 # security-auth-frontend
 
 ## Description
