@@ -89,3 +89,14 @@ With these rules enabled:
 
 - Before merge: PR + approval + green checks are required.
 - After merge to `main`: publish workflow runs automatically.
+
+## npm release authentication
+
+The release workflow publishes `boost-frontend` to npm using the GitHub Actions
+repository secret `NPM_TOKEN`. Configure it with a valid npm granular access
+token that can publish this package and bypass 2FA for automation. Rotate the
+secret before the token expires; never commit the token to the repository.
+
+If the release job reports `EINVALIDNPMTOKEN` or an npm `whoami` 401, replace
+the repository secret with a valid token and rerun the failed workflow. The
+token must belong to an npm account authorized to publish the package.
