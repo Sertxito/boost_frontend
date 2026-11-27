@@ -9,7 +9,7 @@ Paquete npm: `boost-frontend`.
 | Carpeta | Contenido |
 | --- | --- |
 | `agents/` | 10 agentes especializados en arquitectura, Angular, React, microfrontends, pruebas, accesibilidad, rendimiento, sistemas de diseño, migraciones y revisión de código |
-| `skills/` | 12 skills con checklists operativos reutilizables |
+| `skills/` | 12 skills con checklists operativos reutilizables, incluida revisión de React y Next.js |
 | `instructions/` | 13 conjuntos de instrucciones para GitHub Copilot |
 | `prompts/` | 13 prompts listos para usar en VS Code |
 | `specs/` | Contratos de calidad para arquitectura, seguridad, rendimiento, accesibilidad y observabilidad |
